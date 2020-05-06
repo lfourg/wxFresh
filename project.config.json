@@ -12,9 +12,11 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.0.4",
-	"appid": "wx1ed8d583099f139a",
-	"projectname": "%E7%94%B5%E5%95%86",
+	"appid": "wx8428c837c458de48",
+	"projectname": "wxbestcake-master",
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

@@ -17,32 +17,11 @@ Page({
         addr: "",
         addresslist: [{
             name: '刘先生',
-            phone: '13623834531',
-            city: '上海',
-            area: '上海市',
-            address: '浦东张江高科',
+            phone: '136****1234',
+            city: '湖南',
+            area: '岳阳',
+            address: '南湖小区',
             id: 0
-        }, {
-            name: '张先生',
-            phone: '13623834531',
-            city: '上海',
-            area: '上海市',
-            address: '浦东张江高科',
-            id: 1
-        }, {
-            name: '刘先生',
-            phone: '13623834531',
-            city: '上海',
-            area: '上海市',
-            address: '浦东张江高科',
-            id: 2
-        }, {
-            name: '刘先生',
-            phone: '13623834531',
-            city: '上海',
-            area: '上海市',
-            address: '浦东张江高科',
-            id: 3
         }],
         addrShow: false,
         scrollTop: 100,
@@ -60,8 +39,8 @@ Page({
             Remarks: "",
             TotalPrice: 0
         },
-        dateStart: "2017-01-01",
-        dateEnd: "2017-01-01",
+        dateStart: "2019-04-01",
+        dateEnd: "2019-04-01",
     },
     bindTimeChange: function (e) {
         var _this = this;
@@ -222,6 +201,10 @@ Page({
     },
     submit: function () {
         var _this = this;
+      wx.redirectTo({
+        url: "../payment/payment?oid=11"
+      })
+      return
         if (_this.valid()) {
             _this.getTotalPrice();
             var obj = {};

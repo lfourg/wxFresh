@@ -8,6 +8,7 @@ page {
   padding: 20rpx 25rpx;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: #f0f0f0;
 }
 

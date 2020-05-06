@@ -22,7 +22,7 @@
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#576b95",
-    "navigationBarTitleText": "BigCake",
+    "navigationBarTitleText": "西客生鲜",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
@@ -35,9 +35,9 @@
       },
       {
         "pagePath": "pages/cake/cake",
-        "text": "蛋糕馆",
-        "iconPath": "icon/cake-1.png",
-        "selectedIconPath": "icon/cake-2.png"
+        "text": "分类",
+        "iconPath": "icon/class-1.png",
+        "selectedIconPath": "icon/class-2.png"
       },
       {
         "pagePath": "pages/cart/cart",
@@ -60,5 +60,6 @@
     "request": 10000,
     "downloadFile": 10000,
     "uploadFile": 10000
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

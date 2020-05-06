@@ -2,7 +2,7 @@
 var base = getApp();
 Page({
   data: {
-    loaded: false,
+    loaded: true,
     oid: "1703101349147978",
     myorder: {},
     prolist: [],

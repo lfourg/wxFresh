@@ -8,9 +8,12 @@ App({
         }
     },
     path: {
-        res: "https://res.bestcake.com/",
+        res2: "https://res.bestcake.com/",
+        res:"https://lfourg.github.io/",
         //www: "https://mcstj.bestcake.com/"
         www:"http://localhost:9419/"
+    },
+    data:{
     },
     user: {
         userid: 0,//用户ID
@@ -57,7 +60,7 @@ App({
                 if (p.supplyno in dic) {
                     dic[p.supplyno].num += p.num;
                 } else {
-                    dic[p.supplyno] = { name: p.name, price: p.price, size: p.size, num: p.num, brand: p.brand }
+                  dic[p.supplyno] = { name: p.name, price: p.price, size: p.size, num: p.num, brand: p.brand, img: p.img }
                 }
                 wx.setStorageSync(this.key, dic);
                 re = true;
@@ -102,7 +105,7 @@ App({
             var list = [];
             var dic = wx.getStorageSync(this.key);
             for (var p in dic) {
-                list.push({ supplyno: p, name: dic[p].name, price: dic[p].price, size: dic[p].size, num: dic[p].num, brand: dic[p].brand });
+                list.push({ supplyno: p, name: dic[p].name, price: dic[p].price, size: dic[p].size, num: dic[p].num, brand: dic[p].brand,img:dic[p].img });
             }
             return list;
         },

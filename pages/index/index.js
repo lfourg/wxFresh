@@ -1,15 +1,28 @@
 //index.js
 //获取应用实例
 var base = getApp();
+var poultry = require('../../utils/poultryData.js')
 Page({
   data: {
-    path:base.path.res+"smallexe/index/",
-    motto: '你好、BigCake！',
+    path: base.path.res,
+    motto: '西客，您好！',
     userInfo: {},
-    array: ['上海', '北京', '杭州', '宁波'],
-    index: 0
+    array: ['岳阳'],
+    index: 0,
+    poultryData: []
   },
-  goCake: function (e) {
+  onLoad: function () {
+    var that = this
+    //调用应用实例的方法获取全局数据
+    //app.getUserInfo(function (userInfo) {
+    //更新数据
+    //that.setData({
+    //userInfo: userInfo
+    //})
+    //})
+    this.setData({ 'poultryData': poultry.data })
+  },
+  goClass: function (e) {
     var brand = e.currentTarget.dataset.brand;
     if(brand&&brand==1){
       base.cake.tab=1;
@@ -43,23 +56,12 @@ Page({
     //url: '../socket/socket'
     //})
   },
-  onLoad: function () {
-    var that = this
-    //调用应用实例的方法获取全局数据
-    //app.getUserInfo(function (userInfo) {
-    //更新数据
-    //that.setData({
-    //userInfo: userInfo
-    //})
-    //})
-
-  },
   onPullDownRefresh: function () {
     wx.stopPullDownRefresh()
   },
   onShareAppMessage: function () {
     return {
-      title: 'BigCake（体验版）',
+      title: '西客生鲜',
       desc: '',
       path: '/pages/index/index?id=123'
     }

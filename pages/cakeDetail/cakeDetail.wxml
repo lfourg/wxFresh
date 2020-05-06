@@ -19,8 +19,8 @@
         <text>{{s.Size}}</text>
       </view>
     </view>
-    <view class="sm">主要原料：
-      <text>{{resource}}</text>
+    <view class="sm">规格：
+      <text>{{current.weight}}</text>
     </view>
     <view class="sm">贮存条件：
       <text>{{fresh}}</text>
@@ -28,6 +28,6 @@
   </view>
   <view class="tool">
     <view class="tbtn add" catchtap="addCart">加入购物车(<text class="cart-num">{{cartNum}}</text>)</view>
-    <view class="tbtn buy" catchtap="_go">购买等额优惠券</view>
+    <view wx:if="{{false}}" class="tbtn buy" catchtap="_go">购买等额优惠券</view>
   </view>
 </view>
